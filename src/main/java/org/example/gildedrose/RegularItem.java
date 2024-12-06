@@ -11,6 +11,7 @@ public class RegularItem extends AbstractItem {
         if (quality > 0) {
             quality--;
         }
+        super.update();
     }
 
 }

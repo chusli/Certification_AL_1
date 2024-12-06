@@ -14,10 +14,6 @@ class GildedRose {
                 abstractItem.update();
             }
 
-            if (!(item instanceof LegendaryItem)) {
-                item.sellIn = item.sellIn - 1;
-            }
-
             if (item.sellIn < 0) {
                 if (!(item instanceof MaturingItem)) {
                     if (!(item instanceof ScarcityItem)) {

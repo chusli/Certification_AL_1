@@ -12,6 +12,7 @@ public abstract class AbstractItem extends Item {
         if (quality > MAXIMUM_QUALITY) {
             quality = MAXIMUM_QUALITY;
         }
+        sellIn--;
     }
 
 }
