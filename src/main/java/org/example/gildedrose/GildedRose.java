@@ -13,24 +13,6 @@ class GildedRose {
             if (item instanceof AbstractItem abstractItem) {
                 abstractItem.update();
             }
-
-            if (item.sellIn < 0) {
-                if (!(item instanceof MaturingItem)) {
-                    if (!(item instanceof ScarcityItem)) {
-                        if (item.quality > 0) {
-                            if (!(item instanceof LegendaryItem)) {
-                                item.quality = item.quality - 1;
-                            }
-                        }
-                    } else {
-                        item.quality = 0;
-                    }
-                } else {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
-                    }
-                }
-            }
         }
     }
 

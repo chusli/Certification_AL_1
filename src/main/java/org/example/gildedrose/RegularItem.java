@@ -8,7 +8,9 @@ public class RegularItem extends AbstractItem {
 
     @Override
     public void update() {
-        if (quality > 0) {
+        if (sellIn < 1) {
+            quality -= 2;
+        } else {
             quality--;
         }
         super.update();
