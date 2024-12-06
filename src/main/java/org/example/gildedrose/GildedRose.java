@@ -10,29 +10,16 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            if (!(item instanceof MaturingItem)
-                    && !(item instanceof ScarcityItem)) {
-                if (item.quality > 0) {
-                    if (!(item instanceof LegendaryItem)) {
-                        item.quality = item.quality - 1;
-                    }
-                }
+            if (item instanceof RegularItem regularItem) {
+                regularItem.update();
             } else {
                 if (item.quality < 50) {
-                    item.quality = item.quality + 1;
+                    if (item instanceof MaturingItem maturingItem) {
+                        maturingItem.update();
+                    }
 
-                    if (item instanceof ScarcityItem) {
-                        if (item.sellIn < 11) {
-                            if (item.quality < 50) {
-                                item.quality = item.quality + 1;
-                            }
-                        }
-
-                        if (item.sellIn < 6) {
-                            if (item.quality < 50) {
-                                item.quality = item.quality + 1;
-                            }
-                        }
+                    if (item instanceof ScarcityItem scarcityItem) {
+                        scarcityItem.update();
                     }
                 }
             }

@@ -6,4 +6,11 @@ public class MaturingItem extends Item {
         super(name, sellIn, quality);
     }
 
+    public void update() {
+        if (quality == 0) {
+            return;
+        }
+        quality++;
+    }
+
 }
