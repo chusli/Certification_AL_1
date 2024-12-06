@@ -11,6 +11,7 @@ public class TexttestFixture {
                 new Item("Elixir of the Mongoose", 5, 7), //
                 new LegendaryItem("Sulfuras, Hand of Ragnaros", 0), //
                 new LegendaryItem("Sulfuras, Hand of Ragnaros", -1),
+                new ScarcityItem("Backstage passes to a TAFKAL80ETC concert", 2, 49),
                 new ScarcityItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
                 new ScarcityItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
                 new ScarcityItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),

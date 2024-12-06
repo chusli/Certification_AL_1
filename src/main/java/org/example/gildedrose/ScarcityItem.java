@@ -1,11 +1,12 @@
 package org.example.gildedrose;
 
-public class ScarcityItem extends Item {
+public class ScarcityItem extends AbstractItem {
 
     public ScarcityItem(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
     }
 
+    @Override
     public void update() {
         if (quality == 0) {
             return;
@@ -20,6 +21,7 @@ public class ScarcityItem extends Item {
         } else {
             quality = 0;
         }
+        super.update();
     }
 
 }

@@ -10,18 +10,8 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            if (item instanceof RegularItem regularItem) {
-                regularItem.update();
-            } else {
-                if (item.quality < 50) {
-                    if (item instanceof MaturingItem maturingItem) {
-                        maturingItem.update();
-                    }
-
-                    if (item instanceof ScarcityItem scarcityItem) {
-                        scarcityItem.update();
-                    }
-                }
+            if (item instanceof AbstractItem abstractItem) {
+                abstractItem.update();
             }
 
             if (!(item instanceof LegendaryItem)) {
